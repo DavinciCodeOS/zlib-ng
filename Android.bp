@@ -98,7 +98,7 @@ cflags_64 = ["-DUNALIGNED64_OK"]
 libz_srcs = [
     "adler32.c",
     "chunkset.c",
-    "compare258.c",
+    "compare256.c",
     "compress.c",
     "cpu_features.c",
     "crc32.c",
