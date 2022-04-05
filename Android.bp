@@ -92,9 +92,6 @@ cflags_android_x86 = [
     "-mvpclmulqdq",
 ]
 
-// This optimization is applicable to arm64 and x86-64.
-cflags_64 = ["-DUNALIGNED64_OK"]
-
 libz_srcs = [
     "adler32.c",
     "chunkset.c",
@@ -121,7 +118,7 @@ libz_srcs = [
     "inflate.c",
     "inftrees.c",
     "insert_string.c",
-    "insert_string.c",
+    "insert_string_roll.c",
     "slide_hash.c",
     "trees.c",
     "uncompr.c",
@@ -142,6 +139,8 @@ cflags_common = [
     "-Wall",
     "-Werror",
     "-Wno-implicit-fallthrough",
+    "-Wno-unused-function",
+    "-flto",
     "-O3",
     "-DNDEBUG",
     "-fno-semantic-interposition",
